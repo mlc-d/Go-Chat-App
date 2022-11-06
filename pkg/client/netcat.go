@@ -39,3 +39,11 @@ func copyContent(w io.Writer, r io.Reader) {
 		log.Fatalln(err.Error())
 	}
 }
+
+/*
+The flow of the program is:
+-> It dials the given tcp address (line 26).
+-> it fires a go routine that is copying the content from the tcp connection to stdout.
+-> the main routine then starts to read from the stdin and writing to the tcp connection.
+NOTE: as far as i can see, lines 30 and 31 are never executed.
+*/
