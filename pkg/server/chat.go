@@ -83,3 +83,10 @@ func main() {
 		go handleConnection(conn)
 	}
 }
+
+/*
+The flow of the program is:
+-> starts to listen on the given address using the tcp protocol.
+-> fires a go routine that will be distributing incoming messages.
+-> waits on the listener for any new connection and fires a goroutine to handle them accordingly.
+*/
